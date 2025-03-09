@@ -1,0 +1,190 @@
+script: "/menu/menu.gui_script"
+fonts {
+  name: "main"
+  font: "/assets/font/main.font"
+}
+textures {
+  name: "main"
+  texture: "/main/main.atlas"
+}
+textures {
+  name: "game"
+  texture: "/game/core/game.tilesource"
+}
+nodes {
+  position {
+    x: 512.0
+    y: 288.0
+  }
+  type: TYPE_BOX
+  id: "container"
+  adjust_mode: ADJUST_MODE_STRETCH
+  inherit_alpha: true
+}
+nodes {
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "game/arrow"
+  id: "arrow"
+  parent: "container"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -83.0
+    y: -130.0
+  }
+  size {
+    x: 200.0
+    y: 32.0
+  }
+  color {
+    x: 0.9490196
+    y: 0.8784314
+    z: 0.3529412
+  }
+  type: TYPE_TEXT
+  text: "NEW GAME"
+  font: "main"
+  id: "1"
+  pivot: PIVOT_W
+  outline {
+    x: 0.105882354
+    y: 0.05882353
+    z: 0.15686275
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "container"
+  inherit_alpha: true
+  shadow_alpha: 0.0
+  text_tracking: 0.05
+}
+nodes {
+  position {
+    x: -83.0
+    y: -170.0
+  }
+  size {
+    x: 200.0
+    y: 32.0
+  }
+  color {
+    x: 0.9490196
+    y: 0.8784314
+    z: 0.3529412
+  }
+  type: TYPE_TEXT
+  text: "CONTROLS"
+  font: "main"
+  id: "2"
+  pivot: PIVOT_W
+  outline {
+    x: 0.105882354
+    y: 0.05882353
+    z: 0.15686275
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "container"
+  inherit_alpha: true
+  shadow_alpha: 0.0
+  text_tracking: 0.05
+}
+nodes {
+  position {
+    x: -83.0
+    y: -210.0
+  }
+  size {
+    x: 200.0
+    y: 32.0
+  }
+  color {
+    x: 0.9490196
+    y: 0.8784314
+    z: 0.3529412
+  }
+  type: TYPE_TEXT
+  text: "CREDITS"
+  font: "main"
+  id: "3"
+  pivot: PIVOT_W
+  outline {
+    x: 0.105882354
+    y: 0.05882353
+    z: 0.15686275
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "container"
+  inherit_alpha: true
+  shadow_alpha: 0.0
+  text_tracking: 0.05
+}
+nodes {
+  position {
+    y: 20.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "main/logo"
+  id: "logo"
+  parent: "container"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    y: 170.0
+  }
+  size {
+    x: 200.0
+    y: 32.0
+  }
+  color {
+    x: 0.5411765
+    y: 0.7254902
+    z: 0.32941177
+  }
+  type: TYPE_TEXT
+  text: "HISCORE 00000"
+  font: "main"
+  id: "hiscore"
+  outline {
+    x: 0.105882354
+    y: 0.05882353
+    z: 0.15686275
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "container"
+  inherit_alpha: true
+  shadow_alpha: 0.0
+  text_tracking: 0.05
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

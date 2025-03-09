@@ -1,0 +1,23 @@
+image: "/assets/png/sq.png"
+tile_width: 32
+tile_height: 24
+animations {
+  id: "jump"
+  start_tile: 4
+  end_tile: 4
+  playback: PLAYBACK_NONE
+}
+animations {
+  id: "run"
+  start_tile: 1
+  end_tile: 6
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 15
+}
+animations {
+  id: "static"
+  start_tile: 7
+  end_tile: 7
+  playback: PLAYBACK_NONE
+}
+extrude_borders: 2

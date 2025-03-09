@@ -1,0 +1,246 @@
+script: "/game/gui/game.gui_script"
+fonts {
+  name: "main"
+  font: "/assets/font/main.font"
+}
+textures {
+  name: "game"
+  texture: "/game/core/game.tilesource"
+}
+textures {
+  name: "grey"
+  texture: "/game/object/grey.tilesource"
+}
+textures {
+  name: "main"
+  texture: "/main/main.atlas"
+}
+nodes {
+  position {
+    x: 512.0
+    y: 576.0
+  }
+  scale {
+    x: 64.0
+    y: 8.0
+  }
+  type: TYPE_BOX
+  texture: "game/grad"
+  id: "grad-top"
+  pivot: PIVOT_N
+  adjust_mode: ADJUST_MODE_STRETCH
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 104.0
+    y: 520.0
+  }
+  size {
+    x: 32.0
+    y: 32.0
+  }
+  color {
+    x: 0.9490196
+    y: 0.8784314
+    z: 0.3529412
+  }
+  type: TYPE_TEXT
+  text: "0"
+  font: "main"
+  id: "acorns"
+  pivot: PIVOT_W
+  outline {
+    x: 0.105882354
+    y: 0.05882353
+    z: 0.15686275
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  inherit_alpha: true
+  text_tracking: 0.05
+}
+nodes {
+  position {
+    x: -50.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "game/acorn"
+  id: "acorn-icon"
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "acorns"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 894.0
+    y: 522.0
+  }
+  size {
+    x: 32.0
+    y: 32.0
+  }
+  color {
+    x: 0.9490196
+    y: 0.8784314
+    z: 0.3529412
+  }
+  type: TYPE_TEXT
+  text: "0"
+  font: "main"
+  id: "greys"
+  pivot: PIVOT_E
+  outline {
+    x: 0.105882354
+    y: 0.05882353
+    z: 0.15686275
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  inherit_alpha: true
+  text_tracking: 0.05
+}
+nodes {
+  position {
+    x: 60.0
+  }
+  scale {
+    x: -4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "grey/anim"
+  id: "grey-icon"
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "greys"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 432.0
+    y: 530.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "game/heart"
+  id: "heart1"
+  adjust_mode: ADJUST_MODE_STRETCH
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 472.0
+    y: 530.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "game/heart"
+  id: "heart2"
+  adjust_mode: ADJUST_MODE_STRETCH
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 512.0
+    y: 530.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "game/heart"
+  id: "heart3"
+  adjust_mode: ADJUST_MODE_STRETCH
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 552.0
+    y: 530.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "game/heart"
+  id: "heart4"
+  adjust_mode: ADJUST_MODE_STRETCH
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 592.0
+    y: 530.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "game/heart"
+  id: "heart5"
+  adjust_mode: ADJUST_MODE_STRETCH
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 512.0
+    y: 22.0
+  }
+  size {
+    x: 32.0
+    y: 32.0
+  }
+  color {
+    x: 0.9490196
+    y: 0.8784314
+    z: 0.3529412
+  }
+  type: TYPE_TEXT
+  font: "main"
+  id: "status"
+  pivot: PIVOT_S
+  outline {
+    x: 0.105882354
+    y: 0.05882353
+    z: 0.15686275
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  inherit_alpha: true
+  text_tracking: 0.05
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
