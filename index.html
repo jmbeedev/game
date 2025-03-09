@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alpha Squirrel Game</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom Style (Optional) -->
+    <!-- Custom Styles -->
     <style>
         body {
             background-color: #f8f9fa;
@@ -63,15 +63,15 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Optional: Include your JavaScript to load and interact with the 'game.project' file -->
+    <!-- JavaScript to load the game project -->
     <script>
-        // Example of how you might start loading or interacting with the 'game.project' data
-        // This part would need to be implemented based on the game engine you're using
-        fetch('path/to/your/game.project')
+        // You need to make sure that the paths in 'game.project' are accessible correctly
+        fetch('https://raw.githubusercontent.com/yourusername/yourrepository/main/game.project')
             .then(response => response.text())
             .then(data => {
                 console.log('Game Project Config:', data);
-                // Add more logic to handle the game configurations and load the game
+                // Add more logic to parse and load the game based on this data
+                // For instance, loading main_collection and render files
             })
             .catch(err => console.error('Error loading game project:', err));
     </script>
