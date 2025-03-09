@@ -1,80 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alpha Squirrel Game</title>
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Styles -->
     <style>
-        body {
-            background-color: #f8f9fa;
-            text-align: center;
-        }
-        .splash-image {
-            max-width: 100%;
-            height: auto;
-        }
+        body { text-align: center; }
+        .splash-image { max-width: 100%; height: auto; }
     </style>
 </head>
-
 <body>
     <div class="container py-5">
         <h1 class="display-4 mb-3">Welcome to Alpha Squirrel</h1>
-        <p class="lead">An exciting new game coming soon. Stay tuned for updates!</p>
-        <img src="/assets/png/splash.png" alt="Splash Image" class="splash-image mb-4">
-        
-        <h3>Game Configuration:</h3>
-        <pre>
-            [bootstrap]
-            main_collection = /main/main.collectionc
-            render = /render/custom.renderc
-
-            [display]
-            width = 1024
-            height = 576
-
-            [graphics]
-            default_texture_min_filter = nearest
-            default_texture_mag_filter = nearest
-
-            [script]
-            shared_state = 1
-
-            [project]
-            title = Alpha Squirrel
-            dependencies#0 = https://github.com/subsoap/defos/archive/master.zip
-
-            [html5]
-            splash_image = /assets/png/splash.png
-
-            [sprite]
-            max_count = 256
-        </pre>
-
-        <p>Loading game configurations...</p>
+        <p class="lead">Loading the game...</p>
+        <img src="assets/png/splash.png" alt="Splash Image" class="splash-image mb-4">
+        <p>Game is now loading...</p>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JavaScript to load the game project -->
     <script>
-        // You need to make sure that the paths in 'game.project' are accessible correctly
-        fetch('https://raw.githubusercontent.com/yourusername/yourrepository/main/game.project')
+        // Load game.project (adjust path as needed)
+        fetch('game.project')
             .then(response => response.text())
             .then(data => {
-                console.log('Game Project Config:', data);
-                // Add more logic to parse and load the game based on this data
-                // For instance, loading main_collection and render files
+                console.log('Game Project Loaded:', data);
+                // Logic to parse and initialize game based on this config
             })
-            .catch(err => console.error('Error loading game project:', err));
+            .catch(err => console.error('Error loading game.project:', err));
     </script>
-</body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
